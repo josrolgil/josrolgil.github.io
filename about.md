@@ -4,12 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I will use this blog to practice writing, but also to share information that might be useful for other engineers
 
 ### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+I am currently working in Ericsson Spain, where I am contributing to build UDR product, a cloud native telco database for storing 4G and 5G data.
