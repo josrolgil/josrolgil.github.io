@@ -8,7 +8,7 @@ I would say this is even more important nowadays with the current setup of remot
 
 For doing that, I used what is called the [Johari window](https://en.wikipedia.org/wiki/Johari_window).
 
-![_config.yml]({{ site.baseurl }}/images/2022/johari/johari.PNG){: width="250"}
+![_config.yml]({{ site.baseurl }}/images/2022/johari/johari.PNG)
 
 Basically, this model defines four areas. If we made a similarity with a house:
 
