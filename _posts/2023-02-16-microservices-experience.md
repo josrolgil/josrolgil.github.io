@@ -3,7 +3,9 @@ layout: post
 title: My experience with microservices
 ---
 
-I had the opportunity some last summer to speak in one lecture of the Cloud Apps Master (URJC). The subject being discussed was microservices architecture, and some guests from the industry could expose their knowledge. Therefore, in my case, I spoke about my learnings while working in the Ericsson product called CCDM (Cloud Core Data-Storage Manager). Basically, if one performs a quick search in google "5g core cloud native", the results are that many network vendors are implementing 5g core using cloud native technologies. This may produce, although not in all cases of course, products based on microservices architecture, trying to leverage the scalability and other benefits of microservices to address the 5G requirements. The same product for 4G networks was a monolith, so we could see also here the migration.
+I had the opportunity last summer to speak in one lecture of the Cloud Apps Master (URJC), where the subject being discussed was microservices architecture.
+
+Some guests from the industry could expose their knowledge. Therefore, in my case, I spoke about my learnings while working in the Ericsson product called CCDM (Cloud Core Data-Storage Manager). Basically, if one performs a quick search in google "5g core cloud native", the results are that many network vendors are implementing 5g core using cloud native technologies. This may produce, although not in all cases of course, products based on microservices architecture, trying to leverage the scalability and other benefits of microservices to address the 5G requirements. The same product for 4G networks was a monolith, so we could see also here the migration.
 
 At the end, what we have is roughly fifty different microservices. The main ones are the Apache Geode services, because the product is a database for subscriber data, and after that the other just build the whole functionality around: 4G/5G interfaces, alarms, notifications, configuration management, logging, queues... Thus, based on my experience working on this product for more than three years, this is what I could tell about working with microservices.
 
