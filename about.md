@@ -11,4 +11,4 @@ I am currently working in Ericsson Spain, where I am contributing to build the C
 
 ### Talks at events and conferences
 - [T3chfest 2019: Leveraging Kubernetes for NFV - Spanish](https://youtu.be/rrosuVkh2r4)
-- [Devops & Cloud Days 2022: The journey to microservices aubsystem testing - English] (https://vimeo.com/agiletrends/review/728735980/03ab391c01)
+- [Devops & Cloud Days 2022: The journey to microservices aubsystem testing - English](https://vimeo.com/agiletrends/review/728735980/03ab391c01)
