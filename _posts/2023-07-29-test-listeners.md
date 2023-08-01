@@ -2,7 +2,9 @@
 layout: post
 title: Short description about test listeners with java and junit5
 ---
-I have been refactoring one of the container sidecars owned by my team, focusing on the component tests. These tests were deploying the database, a kafka server and the application itself. One of the objectives in this refactor was to keep the start of the database and kafka at the beginning of any test execution and close it at the end, while using Junit5. We could do it because our application just read from the database, so tests will not modify the state.
+I have been refactoring one of the container sidecars owned by my team, focusing on the component tests.
+
+ These tests were deploying the database, a kafka server and the application itself. One of the objectives in this refactor was to keep the start of the database and kafka at the beginning of any test execution and close it at the end, while using Junit5. We could do it because our application just read from the database, so tests will not modify the state.
 In java, you can do some stuff before and after the tests defined in one class with Junit annotations @BeforeAll and @AfterAll, but here we could not do it because, for the sake of maintainability, tests were grouped in different classes based on types of tests. Thus, after some research, we develop two tests listeners that were executed before and after the selected  tests were executed (a single test, a class, a group of classes or all...)
 
 ## The dependency
