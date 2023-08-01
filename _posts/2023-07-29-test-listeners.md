@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Short description about test listeners with java and junit5
+title: Using test listeners with java and junit5 for component tests
 ---
 I have been refactoring one of the container sidecars owned by my team, focusing on the component tests.
 
