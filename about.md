@@ -12,3 +12,4 @@ I am currently working in Ericsson Spain, where I am contributing to build the C
 ### Talks at events and conferences
 - [T3chfest 2019: Leveraging Kubernetes for NFV - Spanish](https://youtu.be/rrosuVkh2r4)
 - [Devops & Cloud Days 2022: The journey to microservices aubsystem testing - English](https://vimeo.com/agiletrends/review/728701829/93afec1072)
+- [Opensouthcode 2023: leveraging code reviews to improve your team work - Spanish](https://www.opensouthcode.org/conferences/opensouthcode2023/program/proposals/639)
