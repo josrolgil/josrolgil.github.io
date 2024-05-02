@@ -3,6 +3,7 @@ layout: post
 title: Kubernetes taints and tolerations
 ---
 The objective of this article is to summarize one mechanism available in Kubernetes to manage pods scheduling, called taints and tolerations.
+
 Taints are applied to nodes. Basically, once you taint the node, by default it applies the effect to all pods, unless the pod tolerates the taint.
 A taint consists of a key, a value and an effect. An example is: key1=value1:NoSchedule. This can be executed with kubectl command.
 ```
@@ -19,7 +20,7 @@ What are the available effects? There you have:
 As was already commented, in order to ignore the effect, a pod can define tolerations in is definition. There are two forms of define a toleration, which I define as narrow or wide.
 Regarding narrow, a pod will indicate specifically the key, value and effect that it tolerates. For that, the operator "Equal" is used. For example:
 
-```
+```yaml
 tolerations:
 - key: "key1"
   operator: "Equal"
@@ -27,7 +28,7 @@ tolerations:
   effect: "NoSchedule"
 ```
 Regarding wide, the toleration only specify the key, and matches all values. For example:
-```
+```yaml
 tolerations:
 - key: "key1"
   operator: "Exists"
