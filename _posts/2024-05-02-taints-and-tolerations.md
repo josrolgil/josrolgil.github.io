@@ -4,12 +4,10 @@ title: Kubernetes taints and tolerations
 ---
 The objective of this article is to summarize one mechanism available in Kubernetes to manage pods scheduling, called taints and tolerations.
 
-
-Taints are applied to nodes. Basically, once you taint the node, by default it applies the effect to all pods, unless the pod tolerates the taint.
+ Taints are applied to nodes. Basically, once you taint the node, by default it applies the effect to all pods, unless the pod tolerates the taint.
 A taint consists of a key, a value and an effect. An example is: key1=value1:NoSchedule. This can be executed with kubectl command.
 
 *kubectl taint nodes node1 key1=value1:NoSchedule*
-
 
 What are the available effects? There you have:
 - NoExecute: applies to already running pods, which will be evicted unless the pods tolerates it.
