@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Container Structure Test: my overview
+title: My overview of Container Structure Test
 ---
 Recently I tested one tool called Container Structure Test and I wanted to shared my overview about it.
 
 This is a tool to test container images. I found it in the Thoughtworks Technology [Radar](https://www.thoughtworks.com/en-es/radar/tools/container-structure-tests)
 at the beginning of 2024. However, current edition does not include it.
 
-![_config.yml]({{ site.baseurl }}/images/2024/container-structure/radar.JPG)
+![Thoughtworks Technology Radar]({{ site.baseurl }}/images/2024/container-structure/radar.jpg)
 
 It caught my attention because we do not have unit tests for container images. Testing theory states that we should
 have a large base of unit tests that execute quick to provide fast feedback. Usually the container images are tested
@@ -21,6 +21,7 @@ is available [here]. Google is the owner of it
 To execute the tool, one just need to run the following command, once installed
 ```
    container-structure-test test --image gcr.io/registry/image:latest --config config.yaml
+
 ```
 where config.yaml defines the different tests that the framework allows.
 These are command tests, file existence tests, file content tests, metadata tests and licence tests.
@@ -129,16 +130,16 @@ Therefore, with these five type of test you can cover the image.
 
 Regarding the execution, the following image describes the CLI interface after executing some tests agains a cached image.
 
-![_config.yml]({{ site.baseurl }}/images/2024/container-structure/example.JPG)
+![Execution example]({{ site.baseurl }}/images/2024/container-structure/example.JPG)
 
 Regarding the maintenance and support, which is something to consider when using a third party library in your projects, google is not officially
 supporting it.
 
-![_config.yml]({{ site.baseurl }}/images/2024/container-structure/unsupported.JPG)
+![Project is not supported]({{ site.baseurl }}/images/2024/container-structure/unsupported.jpg)
 
 I was able to find more details about this decision, described here
 
-![_config.yml]({{ site.baseurl }}/images/2024/container-structure/reason.JPG)
+![Reason of end of project support]({{ site.baseurl }}/images/2024/container-structure/reason.jpg)
 
 However, the project is actively maintained by the community. These years five releases have been published.
 
