@@ -1,30 +1,37 @@
 ---
 layout: post
 title: My overview of Container Structure Test
+excerpt_separator: <!--preview-->
 ---
 Recently I tested one tool called Container Structure Test and I wanted to shared my overview about it.
+<!--preview-->
 
-This is a tool to test container images. I found it in the Thoughtworks Technology [Radar](https://www.thoughtworks.com/en-es/radar/tools/container-structure-tests)
+This is a framework to test container images. I found it in the Thoughtworks Technology [Radar](https://www.thoughtworks.com/en-es/radar/tools/container-structure-tests)
 at the beginning of 2024. However, current edition does not include it.
 
 ![Thoughtworks Technology Radar]({{ site.baseurl }}/images/2024/container-structure/radar.jpg)
 
-It caught my attention because we do not have unit tests for container images. Testing theory states that we should
-have a large base of unit tests that execute quick to provide fast feedback. Usually the container images are tested
-implicitly in integration tests where the container is deployed and the functionality checked. Even not all characteristics
+It caught my attention because I have never developed explicit tests for container images. Testing theory states that we should
+have a large base of unit tests which takes low time to execute and provides fast feedback. Usually the container images are tested
+implicitly in integration tests where the container is deployed and the functionality checked. However not all characteristics
 of the image definition are asserted. For example, with a Dockerfile in mind, the application itself will be executed
 and will allow the tests to pass if it works as expected, but there are other components like labels or users defined there
-that might change and the application will continue the execution without further changes.
+that might change and the application will continue the execution without further notice.
 
-Having said that, let's take a look into this Container Structure Test tool. The [repository] https://github.com/GoogleContainerTools/container-structure-test
-is available [here]. Google is the owner of it
-To execute the tool, one just need to run the following command, once installed
+Having said that, let's take a look into this Container Structure Test tool. The repository
+is available [here](https://github.com/GoogleContainerTools/container-structure-test). Google is the owner of it.
+To execute the tool, one just need to run the following command, once installed:
 ```
    container-structure-test test --image gcr.io/registry/image:latest --config config.yaml
 
 ```
-where config.yaml defines the different tests that the framework allows.
-These are command tests, file existence tests, file content tests, metadata tests and licence tests.
+where gcr.io/registry/image:latest is the image selected in the example to be tested and config.yaml defines the different tests that the framework allows. These tests are the following:
+- Command tests
+- File existence tests
+- File content tests
+- Metadata tests
+- License tests
+
 ## Command tests
 With command tests you can execute a command and expect an output. You can set arguments, a setup command, exclussions...
 For example:
@@ -44,7 +51,7 @@ commandTests:
 ```
 
 ## File existence tests
-This type of test checks whether a file or directory exists and its its permissions.
+This type of test checks whether a file or directory exists and its permissions.
 For example:
 ```
   fileExistenceTests:
@@ -71,7 +78,7 @@ For example:
 ```
 
 ## Metadata test
-This type permits testing different keys of the dockerfile, like the environment variables,
+This type permits testing different characteristics of the image. Actually they map to [Dockerfile](https://docs.docker.com/build/concepts/dockerfile/) keys, like the environment variables,
 the labels, the ports, volumes, commands...
 An example:
 ```
@@ -104,7 +111,7 @@ licenseTests:
 ```
 
 ## Options
-The selection of some options to run the container is available. From enviroment variable and file,
+The selection of some options to run the container is available. From enviroment variables and files,
 the use of tty or which priviledge mode. This could be useful to simulate different execution scenarios.
 For example:
 ```
@@ -128,22 +135,28 @@ globalEnvVars:
 ```
 Therefore, with these five type of test you can cover the image.
 
-Regarding the execution, the following image describes the CLI interface after executing some tests agains a cached image.
+## Execution
+
+Regarding the execution, the following image describes the CLI interface after executing some tests against a cached image.
 
 ![Execution example]({{ site.baseurl }}/images/2024/container-structure/example.JPG)
 
+## Maintenance and support
+
 Regarding the maintenance and support, which is something to consider when using a third party library in your projects, google is not officially
-supporting it.
+supporting it:
 
 ![Project is not supported]({{ site.baseurl }}/images/2024/container-structure/unsupported.jpg)
 
-I was able to find more details about this decision, described here
+I was able to find more details about this decision, described here:
 
 ![Reason of end of project support]({{ site.baseurl }}/images/2024/container-structure/reason.jpg)
 
-However, the project is actively maintained by the community. These years five releases have been published.
+However, the project is actively maintained by the community. During this year, seven releases have been published so far.
 
-In conclussion, this library provides some benefits:
+## Conclusion
+
+In conclusion, this library provides some benefits:
 - Test all parts of your image definition that might not be covered (labels, env vars, ...)
 - Provide quick feedback instead of waiting for integration tests to deploy your container
 - Although some tests might look useless, it provides a safety net in case there are unforeseen changes (e.g. a change in a port done by error)
@@ -151,3 +164,5 @@ In conclussion, this library provides some benefits:
 As drawbacks:
 - Third party dependency. For me any new library needs to add value to your project. Otherwise you will need to keep vulnerabilities and updates and will cost time
 - In my experience, mostly working with Dockerfiles, it is not changed that much, and most of its changes are just versions uplift.
+
+It is interesting to know a tool to test container images. In my experience, I did not experience relevant bugs in the container definition, but could be useful for use cases like security where you have to define a specific user in the image, or basically to increase your trust in the application.
