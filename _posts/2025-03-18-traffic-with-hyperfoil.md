@@ -6,7 +6,7 @@ excerpt_separator: <!--preview-->
 This is a brief overview of Hyperfoil, the "microservice-oriented distributed benchmark framework"
 <!--preview-->
 
-![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/logo.jpg)
+![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/logo.png)
 
 I needed to send some requests to my microservice and a colleague suggested to use a tool that I did not know: [Hyperfoil](https://hyperfoil.io/). Basically, you can configure a load that will be sent to a set of HTTP endpoints. Something nice about Hyperfoil is that
 the core of it is concurrent. The tool will not be a bottle neck when sending lots of requests, as could happen with others. This is a short tutorial about how to use it.
@@ -21,6 +21,8 @@ The latest command shows all options, but I will just focus on a simple executio
 ```
 start-local
 ```
+![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/hyper3.png)
+
 to start a controller within the CLI. The next step is to upload the configuration file. This is an example that I will explain:
 
 ```yaml
@@ -151,19 +153,20 @@ run my-benchmark
 where my-benchmark is defined in the yaml file.
 
 You will see live information about the traffic being sent
-![execution]({{ site.baseurl }}/images/2025/hyperfoil/execution.jpg)
+![execution]({{ site.baseurl }}/images/2025/hyperfoil/hyper1.png)
 
 When the traffic execution is finished, you can check some quick stats
 ```
 stats
 ```
-![stats]({{ site.baseurl }}/images/2025/hyperfoil/stats.jpg)
+![stats]({{ site.baseurl }}/images/2025/hyperfoil/hyper2.png)
 
 and also generate a report with graphs
 ```
-report TODO check comment
+report --destination <dir>
 ```
-![report]({{ site.baseurl }}/images/2025/hyperfoil/report.jpg)
+![report1]({{ site.baseurl }}/images/2025/hyperfoil/hyper4.png)
+![report2]({{ site.baseurl }}/images/2025/hyperfoil/hyper5.png)
 
 ### Conclusion
 In my opinion it is a performant tool easy to use with enough configuration option to define flexible burst of traffic to test agains some endpoints
