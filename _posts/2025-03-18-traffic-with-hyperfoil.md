@@ -9,9 +9,9 @@ This is a brief overview of Hyperfoil, the "microservice-oriented distributed be
 ![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/logo.png)
 
 I needed to send some requests to my microservice and a colleague suggested to use a tool that I did not know: [Hyperfoil](https://hyperfoil.io/). Basically, you can configure a load that will be sent to a set of HTTP endpoints. Something nice about Hyperfoil is that
-the core of it is concurrent. The tool will not be a bottle neck when sending lots of requests, as could happen with others. This is a short tutorial about how to use it.
+the core of it is concurrent. The tool will not be a bottleneck when sending lots of requests, as could happen with others. Below I describe a short tutorial about how to use it.
 
-The first step is to download the binaries and save then in a known directory. Once there, you can access the CLI:
+The first step is to [download](https://github.com/Hyperfoil/Hyperfoil/releases) the binaries and save then in a known directory. Once there, you can access the CLI:
 ```
 cd hyperfoil-0.27.1/
 ./bin/cli.sh
@@ -96,7 +96,7 @@ http:
 ```
 Then I defined the phases, in my example I have the *rampup* and *main* phases.
 
-In the *rampup* I want to start sending traffic but not abruptly. To achieve it the phase property "increasingRate" can be used to define the number of request is used initially and the number to reach: *initialUsersPerSec* and *targetUsersPerSec*, for a duration of 10s. Then you have to define what is called the forks, the sub-phases of traffic. In my *rampup* configuration I do not define but point to then because the definition happens in the other phase. Note the * to reference the definition.
+In the *rampup* I want to start sending traffic but not abruptly. To achieve it the phase property "increasingRate" can be used to define the number of requests used initially and the number to reach: *initialUsersPerSec* and *targetUsersPerSec*, for a duration of 10s. Then you have to define what is called the forks, the sub-phases of traffic. In my *rampup* configuration I do not define but point to then because the definition happens in the other phase. Note the * to reference the definition.
 ```yaml
 - rampup:
     increasingRate:
@@ -108,7 +108,7 @@ In the *rampup* I want to start sending traffic but not abruptly. To achieve it 
       - getSubs: *getSubs
 ```
 
-There are different types of traffic, check then in [phases](https://hyperfoil.io/docs/user-guide/benchmark/phases/), being: *constantRate*, *increasingRate*,
+There are different types of [traffic](https://hyperfoil.io/docs/user-guide/benchmark/phases/), being: *constantRate*, *increasingRate*,
 *decreasingRate*, *atOnce*, *always*, *noop*. The names are moreless descriptive of the purpose.
 
 I have used *constantRate* in my main phase definition:
@@ -130,16 +130,16 @@ Let's take the first fork as example:
       - randomInt:
           min: 1
           max: 10
-          toVar: mscId
+          toVar: id
       - httpRequest:
-          PUT: /papi/v1/subscribers/${mscId}/journal
+          PUT: /v1/subscribers/${id}/journal
           headers:
             Content-Type: application/json
           body:
             fromFile: journal.json
 ```
 You define a fork with a name and an address (used for reference). Then you can set a weight. The bigger the weight the more requests will be sent. For instance, if
-you send 100 request per second, and you have two forks with weight 1, each one will receive 1/(1+1) * 100 /s requests. Then you define a scenario, the HTTP request. Interesting here is the use of variables to be included in the request, in my example you have *id* variable taking values from 1 to 10. This is included in a PUT URI with some headers and a body. The body can be defined directly in the yaml (consider using | to define multiple lines) or be included by a file. This is what I have done since my body is quite large.
+you send 100 request per second, and you have two forks with weight 1, each one will receive 1/(1+1) * 100 requests/s. Then you define a scenario, the HTTP request. Interesting here is the use of variables to be included in the request, in my example you have *id* variable taking values from 1 to 10. This is included in a PUT URI with some headers and a body. The body can be defined directly in the yaml (consider using | to define multiple lines) or be included by a file. This is what I have done since my body is quite large.
 
 Once you have your traffic scenario defined, you have to upload it to the local hyperfoil server. In the CLI:
 ```
@@ -150,7 +150,7 @@ The next step is to run traffic:
 ```
 run my-benchmark
 ```
-where my-benchmark is defined in the yaml file.
+where my-benchmark is the name defined in the yaml file.
 
 You will see live information about the traffic being sent
 ![execution]({{ site.baseurl }}/images/2025/hyperfoil/hyper1.png)
