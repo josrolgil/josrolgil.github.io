@@ -62,9 +62,9 @@ and apply again when restarting the container, for instance, although I have to 
 To verify the error, I issued:
 
 ```
-kubectl -n test exec  test-app-pod -c ertest-app ls -la mkdir /var/stats/newdir
+kubectl -n test exec test-app-pod -c test-app ls -la mkdir /var/stats/newdir
 ```
 
 and you will see the error message.
 
-I did not spend more time learning about the tool because I acomplish my objective, but it seemed an easy tool to use when infrastructure errors want to be simulated and test in our applications
+I did not spend more time learning about the tool because I acomplished my objective, but it seemed an easy tool to use when infrastructure errors want to be simulated and test in our applications.
