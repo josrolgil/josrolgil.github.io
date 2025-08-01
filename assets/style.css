@@ -1,0 +1,18 @@
+pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 1em;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  white-space: pre-wrap; /* Optional: wraps long lines */
+}
+
+code {
+  background: transparent;
+  font-family: inherit;
+}
+
