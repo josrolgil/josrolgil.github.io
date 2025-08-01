@@ -9,7 +9,7 @@ Recently I tested one tool called Container Structure Test and I wanted to share
 This is a framework to test container images. I found it in the Thoughtworks Technology [Radar](https://www.thoughtworks.com/en-es/radar/tools/container-structure-tests)
 at the beginning of 2024. However, current edition does not include it.
 
-![Thoughtworks Technology Radar]({{ site.baseurl }}/images/2024/container-structure/radar.jpg)
+![Thoughtworks Technology Radar]({{ site.baseurl }}/images/2024/container-structure/radar.jpg){: loading="lazy"}
 
 It caught my attention because I have never developed explicit tests for container images. Testing theory states that we should
 have a large base of unit tests which takes low time to execute and provides fast feedback. Usually the container images are tested
@@ -139,18 +139,18 @@ Therefore, with these five type of test you can cover the image.
 
 Regarding the execution, the following image describes the CLI interface after executing some tests against a cached image.
 
-![Execution example]({{ site.baseurl }}/images/2024/container-structure/example.JPG)
+![Execution example]({{ site.baseurl }}/images/2024/container-structure/example.JPG){: loading="lazy"}
 
 ## Maintenance and support
 
 Regarding the maintenance and support, which is something to consider when using a third party library in your projects, google is not officially
 supporting it:
 
-![Project is not supported]({{ site.baseurl }}/images/2024/container-structure/unsupported.jpg)
+![Project is not supported]({{ site.baseurl }}/images/2024/container-structure/unsupported.jpg){: loading="lazy"}
 
 I was able to find more details about this decision, described here:
 
-![Reason of end of project support]({{ site.baseurl }}/images/2024/container-structure/reason.jpg)
+![Reason of end of project support]({{ site.baseurl }}/images/2024/container-structure/reason.jpg){: loading="lazy"}
 
 However, the project is actively maintained by the community. During this year, seven releases have been published so far.
 
@@ -162,7 +162,7 @@ In conclusion, this library provides some benefits:
 - Although some tests might look useless, it provides a safety net in case there are unforeseen changes (e.g. a change in a port done by error)
 - It is an easy to learn framework
 As drawbacks:
-- Third party dependency. For me any new library needs to add value to your project. Otherwise you will need to keep vulnerabilities and updates and will cost time
+- Third party dependency. For me any new library needs to add value to your project. Otherwise, you will need to keep vulnerabilities and updates and will cost time
 - In my experience, mostly working with Dockerfiles, it is not changed that much, and most of its changes are just versions uplift.
 
 It is interesting to know a tool to test container images. In my experience, I did not experience relevant bugs in the container definition, but could be useful for use cases like security where you have to define a specific user in the image, or basically to increase your trust in the application.

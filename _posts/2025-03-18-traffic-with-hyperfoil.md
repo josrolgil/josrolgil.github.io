@@ -21,7 +21,7 @@ The latest command shows all options, but I will just focus on a simple executio
 ```
 start-local
 ```
-![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/hyper3.png)
+![hyperfoil logo]({{ site.baseurl }}/images/2025/hyperfoil/hyper3.png){: loading="lazy"}
 
 to start a controller within the CLI. The next step is to upload the configuration file. This is an example that I will explain:
 
@@ -109,7 +109,7 @@ In the *rampup* I want to start sending traffic but not abruptly. To achieve it 
 ```
 
 There are different types of [traffic](https://hyperfoil.io/docs/user-guide/benchmark/phases/), being: *constantRate*, *increasingRate*,
-*decreasingRate*, *atOnce*, *always*, *noop*. The names are moreless descriptive of the purpose.
+*decreasingRate*, *atOnce*, *always*, *noop*. The names are descriptive of the purpose.
 
 I have used *constantRate* in my main phase definition:
 ```yaml
@@ -153,20 +153,20 @@ run my-benchmark
 where my-benchmark is the name defined in the yaml file.
 
 You will see live information about the traffic being sent
-![execution]({{ site.baseurl }}/images/2025/hyperfoil/hyper1.png)
+![execution]({{ site.baseurl }}/images/2025/hyperfoil/hyper1.png){: loading="lazy"}
 
 When the traffic execution is finished, you can check some quick stats
 ```
 stats
 ```
-![stats]({{ site.baseurl }}/images/2025/hyperfoil/hyper2.png)
+![stats]({{ site.baseurl }}/images/2025/hyperfoil/hyper2.png){: loading="lazy"}
 
 and also generate a report with graphs
 ```
 report --destination <dir>
 ```
-![report1]({{ site.baseurl }}/images/2025/hyperfoil/hyper4.png)
-![report2]({{ site.baseurl }}/images/2025/hyperfoil/hyper5.png)
+![report1]({{ site.baseurl }}/images/2025/hyperfoil/hyper4.png){: loading="lazy"}
+![report2]({{ site.baseurl }}/images/2025/hyperfoil/hyper5.png){: loading="lazy"}
 
 ### Conclusion
-In my opinion it is a performant tool easy to use with enough configuration option to define flexible burst of traffic to test agains some endpoints
+In my opinion it is a performant tool easy to use with enough configuration option to define flexible burst of traffic to test against some endpoints

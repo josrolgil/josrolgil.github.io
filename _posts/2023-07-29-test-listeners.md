@@ -40,7 +40,7 @@ public class EnvironmentListener implements TestExecutionListener {
 }
 ```
 
-These two methods were executed at the beggining before any test was started (testPlanExecutionStarted)  and after all had finished (testPlanExecutionFinished). So basically we were starting all components and then stopping all, with the logic encapsulated in CtDependencies.
+These two methods were executed at the beginning before any test was started (testPlanExecutionStarted)  and after all had finished (testPlanExecutionFinished). So basically we were starting all components and then stopping all, with the logic encapsulated in CtDependencies.
 
 To enable the listeners, one more thing was needed, create the following file src/test/resources/META-INF/services/org.junit.platform.launcher.TestExecutionListener that had the route to our class implementing the methods:
 ct.environment.EnvironmentListener

@@ -6,11 +6,11 @@ excerpt_separator: <!--preview-->
 Chaos Mesh is a tool that allows to simulate different types of failures in your Kubernetes cluster.
 <!--preview-->
 
-![chaos_mesh_logo]({{ site.baseurl }}/images/2025/chaos/chaos-mesh-preview.png)
+![chaos_mesh_logo]({{ site.baseurl }}/images/2025/chaos/chaos-mesh-preview.png){: loading="lazy"}
 
-Some time ago I needed to test an I/O error when configuring a service used by my application. One collegue suggested me Chaos Mesh tool. I bring below a short example about how to use it to simulate an I/O error.
+Some time ago I needed to test an I/O error when configuring a service used by my application. One colleague suggested me Chaos Mesh tool. I bring below a short example about how to use it to simulate an I/O error.
 
-First, a brief introduction, it is an open source project for chaos testing. It offers different types of failures, targetting a Kubernetes cluster. You can leverage its basic test types and add new ones, being able to run single experiments or orchestrate more powerful ones. More in the
+First, a brief introduction, it is an open source project for chaos testing. It offers different types of failures, targeting a Kubernetes cluster. You can leverage its basic test types and add new ones, being able to run single experiments or orchestrate more powerful ones. More in the
 [documentation](https://chaos-mesh.org/docs/).
 
 Regarding my experiment, I started installing Chaos Mesh in an already provisioned Kubernetes cluster with my application:
@@ -51,7 +51,7 @@ spec:
   duration: '400s'
 ```
 
-This yaml is defining an errno 5 for IO error, targetting a namespace and label selector for my pod and the container I want to affect. To run the experiment:
+This yaml is defining an errno 5 for IO error, targeting a namespace and label selector for my pod and the container I want to affect. To run the experiment:
 
 ```
 kubectl -n chaos-mesh apply -f experiment.yaml
@@ -67,4 +67,4 @@ kubectl -n test exec test-app-pod -c test-app ls -la mkdir /var/stats/newdir
 
 and you will see the error message.
 
-I did not spend more time learning about the tool because I acomplished my objective, but it seemed an easy tool to use when infrastructure errors want to be simulated and test in our applications.
+I did not spend more time learning about the tool because I accomplished my objective, but it seemed an easy tool to use when infrastructure errors want to be simulated and test in our applications.
