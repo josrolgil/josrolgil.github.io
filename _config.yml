@@ -86,3 +86,5 @@ exclude:
   - CNAME
 plugins:
   - jekyll-compress-html
+  - jekyll-seo-tag
+  - jekyll-sitemap
