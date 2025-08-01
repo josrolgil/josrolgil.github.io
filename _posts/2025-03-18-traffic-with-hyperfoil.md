@@ -44,7 +44,7 @@ phases:
             - randomInt:
                 min: 1
                 max: 10
-                toVar: mscId
+                toVar: id
             - httpRequest:
                 PUT: /v1/subscribers/${id}/journal
                 headers:
@@ -58,7 +58,7 @@ phases:
             - randomInt:
                 min: 1
                 max: 10
-                toVar: mscId
+                toVar: id
             - httpRequest:
                 PUT: /v1/subscribers/${id}
                 headers:
