@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Chaos Mesh to generate I/O errors in Kubernetes
-description: "A hands-on tutorial for testing storage resilience using Chaos Mesh to create I/O failures in Kubernetes clusters.
+description: A hands-on tutorial for testing storage resilience using Chaos Mesh to create I/O failures in Kubernetes clusters
 tags: [chaos-mesh, kubernetes, io-errors, chaos-testing]
 excerpt_separator: <!--preview-->
 last_modified_at: 2025-07-04
