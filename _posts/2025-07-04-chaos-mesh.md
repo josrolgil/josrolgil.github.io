@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Using Chaos Mesh to generate I/O errors in Kubernetes
+description: "A hands-on tutorial for testing storage resilience using Chaos Mesh to create I/O failures in Kubernetes clusters.
+tags: [chaos-mesh, kubernetes, io-errors, chaos-testing]
 excerpt_separator: <!--preview-->
 ---
 Chaos Mesh is a tool that allows to simulate different types of failures in your Kubernetes cluster.
@@ -8,7 +10,7 @@ Chaos Mesh is a tool that allows to simulate different types of failures in your
 
 ![chaos_mesh_logo]({{ site.baseurl }}/images/2025/chaos/chaos-mesh-preview.png){: loading="lazy"}
 
-Some time ago I needed to test an I/O error when configuring a service used by my application. One colleague suggested me Chaos Mesh tool. I bring below a short example about how to use it to simulate an I/O error.
+Some time ago I needed to test an I/O error when configuring a service used by my application. One colleague suggested me Chaos Mesh tool. I bring below a short example about how to use Chaos Mesh to generate I/O errors in Kubernetes.
 
 First, a brief introduction, it is an open source project for chaos testing. It offers different types of failures, targeting a Kubernetes cluster. You can leverage its basic test types and add new ones, being able to run single experiments or orchestrate more powerful ones. More in the
 [documentation](https://chaos-mesh.org/docs/).
