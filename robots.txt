@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://josrolgil.github.io/sitemap.xml
