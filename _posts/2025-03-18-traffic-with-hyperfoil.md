@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sending test HTTP traffic with Hyperfoil
+tags: [performance, testing]
 excerpt_separator: <!--preview-->
 ---
 This is a brief overview of Hyperfoil, the "microservice-oriented distributed benchmark framework"

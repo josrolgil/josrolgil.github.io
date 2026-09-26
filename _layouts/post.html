@@ -13,5 +13,13 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+  {% if page.tags.size > 0 %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag-chip">#{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   {% include disqus.html %}
 </article>

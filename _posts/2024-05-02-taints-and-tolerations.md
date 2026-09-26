@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Kubernetes taints and tolerations
+tags: [kubernetes]
 excerpt_separator: <!--preview-->
 ---
 The objective of this article is to summarize one mechanism available in Kubernetes to manage pods scheduling, called taints and tolerations.

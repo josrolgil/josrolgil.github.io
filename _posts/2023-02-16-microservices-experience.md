@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My experience with microservices
+tags: [microservices, architecture, 5g]
 ---
 
 I had the opportunity last summer to speak in one lecture of the Cloud Apps Master (URJC), where the subject being discussed was microservices architecture.

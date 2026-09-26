@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My overview of Container Structure Test
+tags: [testing, containers]
 excerpt_separator: <!--preview-->
 ---
 Recently I tested one tool called Container Structure Test and I wanted to shared my overview about it.
