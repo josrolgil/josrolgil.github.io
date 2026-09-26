@@ -2,6 +2,7 @@
 layout: post
 title: Some thoughts after using Kiro for developing a python program
 description: Some reflections after using Kiro as AI coding system
+image: /images/2026/kiro/kiro.png
 tags: [ai,vibe-coding]
 excerpt_separator: <!--preview-->
 last_modified_at: 2026-03-25

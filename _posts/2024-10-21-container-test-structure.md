@@ -2,6 +2,7 @@
 layout: post
 title: My overview of Container Structure Test
 description: An overview of the Container Structure Test tool for validating container images.
+image: /images/2024/container-structure/radar.jpg
 tags: [testing, containers]
 excerpt_separator: <!--preview-->
 ---
