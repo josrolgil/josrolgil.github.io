@@ -331,6 +331,48 @@ footer {
   }
 }
 
+//
+// CODE & READABILITY
+//
+
+// Inline code — give it a subtle background so it stands out from prose.
+// (Scoped to :not(.highlight) descendants so it doesn't fight block styling.)
+code {
+  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: 0.9em;
+  background-color: $lightGray;
+  padding: 2px 6px;
+  border-radius: 4px;
+  word-wrap: break-word;
+}
+
+// Code blocks — long lines scroll horizontally instead of forcing scrollbars
+// on both axes; code inside a block should not get the inline chip styling.
+.highlight {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+
+  pre,
+  code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 14px;
+  }
+}
+
+// Keep post content at a comfortable reading width on large screens.
+.entry {
+  word-wrap: break-word;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
