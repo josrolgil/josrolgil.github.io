@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My experience with microservices
+description: Lessons learned from building a 5G cloud-native telco product with a microservices architecture.
 tags: [microservices, architecture, 5g]
 ---
 

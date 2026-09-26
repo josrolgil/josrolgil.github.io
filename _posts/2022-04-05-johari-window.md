@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building trust in your team with the Johari window
+description: A team-building exercise using the Johari window to build trust in remote engineering teams.
 tags: [soft-skills, teamwork, leadership]
 ---
 The other day in my team weekly spot for talks and team building stuff I run an exercise to improve our team relationship and build trust, which is key when working together. 

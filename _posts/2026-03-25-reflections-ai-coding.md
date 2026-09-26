@@ -4,7 +4,7 @@ title: Some thoughts after using Kiro for developing a python program
 description: Some reflections after using Kiro as AI coding system
 tags: [ai,vibe-coding]
 excerpt_separator: <!--preview-->
-last_modified_at: 2025-03-25
+last_modified_at: 2026-03-25
 ---
 I used [Kiro CLI](https://kiro.dev/cli/), an AI coding tool being a CLI interface for Kiro AI developer platform, and I want to share some thoughts and reflections.
 <!--preview-->

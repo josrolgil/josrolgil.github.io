@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Kubernetes taints and tolerations
+description: A summary of how Kubernetes taints and tolerations control pod scheduling onto nodes.
 tags: [kubernetes]
 excerpt_separator: <!--preview-->
 ---

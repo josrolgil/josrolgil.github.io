@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My overview of Container Structure Test
+description: An overview of the Container Structure Test tool for validating container images.
 tags: [testing, containers]
 excerpt_separator: <!--preview-->
 ---

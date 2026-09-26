@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using test listeners with java and junit5 for component tests
+description: How to use JUnit 5 test listeners in Java to manage shared setup and teardown across component tests.
 tags: [testing, java, junit]
 ---
 I have been refactoring one of the container sidecars owned by my team, focusing on the component tests.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sending test HTTP traffic with Hyperfoil
+description: A short tutorial on sending test HTTP traffic to microservices with the Hyperfoil benchmark framework.
 tags: [performance, testing]
 excerpt_separator: <!--preview-->
 ---
